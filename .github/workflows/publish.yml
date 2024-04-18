@@ -33,6 +33,10 @@ jobs:
     steps:
       - name: Create public folder
         run: mkdir public
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
       - name: list files
         run: ls
       - name: Copy .conf files
