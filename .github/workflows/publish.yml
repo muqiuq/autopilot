@@ -33,6 +33,8 @@ jobs:
     steps:
       - name: Create public folder
         run: mkdir public
+      - name: list files
+        run: ls
       - name: Copy .conf files
         run: cp *.conf ./public
       - name: Upload artifact
