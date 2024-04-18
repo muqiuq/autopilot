@@ -39,6 +39,8 @@ jobs:
         run: mkdir public
       - name: Copy .conf files
         run: cp *.conf ./public
+      - name: Copy .sh files
+        run: cp *.sh ./public        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
