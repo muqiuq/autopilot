@@ -31,14 +31,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Create public folder
-        run: mkdir public
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: list files
-        run: ls
+      - name: Create public folder
+        run: mkdir public
       - name: Copy .conf files
         run: cp *.conf ./public
       - name: Upload artifact
